@@ -91,7 +91,6 @@ Description=SSH and System Info Display
 
 [Service]
 ExecStart=/usr/bin/python3 /path/to/ssh_lcd_monitor.py
-
 User=pi
 Restart=always
 
