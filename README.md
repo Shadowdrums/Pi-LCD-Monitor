@@ -48,7 +48,31 @@ Formulated for the SSH server on Raspberry Pi, aiming to:
 pip install RPLCD RPi.GPIO psutil
 
 ### 🔌 Hardware Connection
-[// Hardware connection details as previously mentioned]
+Ensure your 16x2 LCD is connected to the Raspberry Pi according to the configuration below:
+
+VSS -> GND
+
+VDD -> 5V
+
+VO  -> Potentiometer (for contrast adjustment)
+
+RS  -> GPIO22
+
+RW  -> GND
+
+E   -> GPIO17
+
+D4  -> GPIO25
+
+D5  -> GPIO24
+
+D6  -> GPIO23
+
+D7  -> GPIO18
+
+A   -> 5V (or through a resistor for backlight adjustment)
+
+K   -> GND
 
 ### 💻 Usage
 Run the script using Python:
