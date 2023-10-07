@@ -83,3 +83,9 @@ sudo systemctl start sshmonitor
 🌟 Your contributions and feedback are invaluable! Feel free to fork, pull, or open an issue to share your insights and suggestions.
 
 Thank you for exploring Pi-LCD-Monitor! 🎉
+
+### Note:
+
+
+Please ensure to replace `/path/to/ssh_lcd_monitor.py` with the actual path to your Python script in the Raspberry Pi filesystem. This README can be adjusted as per any additional features or changes you implement in your project moving forward!
+
