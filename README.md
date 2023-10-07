@@ -96,7 +96,8 @@ WantedBy=multi-user.target
 sudo systemctl enable sshmonitor
 sudo systemctl start sshmonitor
 
-✉️ Contributing & Feedback
+### ✉️ Contributing & Feedback
+
 🌟 Your contributions and feedback are invaluable! Feel free to fork, pull, or open an issue to share your insights and suggestions.
 
 Thank you for exploring Pi-LCD-Monitor! 🎉
