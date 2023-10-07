@@ -45,16 +45,27 @@ pip install RPLCD RPi.GPIO psutil
 Ensure your 16x2 LCD is connected to the Raspberry Pi according to the configuration below:
 
 VSS -> GND
+
 VDD -> 5V
+
 VO  -> Potentiometer (for contrast adjustment)
+
 RS  -> GPIO22
+
 RW  -> GND
+
 E   -> GPIO17
+
 D4  -> GPIO25
+
 D5  -> GPIO24
+
 D6  -> GPIO23
+
 D7  -> GPIO18
+
 A   -> 5V (or through a resistor for backlight adjustment)
+
 K   -> GND
 
 ### 💻 Usage
@@ -71,10 +82,12 @@ sudo nano /etc/systemd/system/sshmonitor.service
 
 [Unit]
 Description=SSH and System Info Display
+
 [Service]
 ExecStart=/usr/bin/python3 /path/to/ssh_lcd_monitor.py
 User=pi
 Restart=always
+
 [Install]
 WantedBy=multi-user.target
 
