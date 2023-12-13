@@ -44,7 +44,7 @@ def get_system_uptime():
     try:
         with open("/proc/uptime", "r") as f:
             uptime_seconds = float(f.readline().split()[0])
-            uptime_str = str(timedelta(seconds = uptime_seconds))
+            uptime_str = str(timedelta(seconds=uptime_seconds))
             return uptime_str.split(".")[0]  # Ignore milliseconds
     except:
         return "Unavailable"
@@ -70,18 +70,13 @@ def get_info_pairs():
         (f"IP: {ip_address}", f"Stor: {used_storage}/{total_storage}G")
     ]
 
-lcd = CharLCD(pin_rs=15, pin_rw=18, pin_e=16, pins_data=[21, 22, 23, 24],
-              numbering_mode=GPIO.BOARD,
-              cols=16, rows=2, dotsize=8,
-              charmap='A02',
-              auto_linebreaks=True)
-
 def update_lcd_smooth(lines, previous_lines):
     transition_steps = 16
     for i in range(transition_steps + 1):
         transition_line1 = previous_lines[0][i:] + lines[0][:i]
         transition_line2 = previous_lines[1][i:] + lines[1][:i]
         
+        lcd.clear()
         lcd.cursor_pos = (0, 0)
         lcd.write_string(transition_line1.ljust(16))
         lcd.cursor_pos = (1, 0)
